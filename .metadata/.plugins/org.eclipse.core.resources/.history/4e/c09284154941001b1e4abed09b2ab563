@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class FiboanacciSeries {
+
+	public static void main(String[] args)
+	{
+		int no,a=0,b=1,sum=1;
+		Scanner scn=new Scanner(System.in);
+		System.out.println("Enter no");
+		a=scn.nextInt();
+		System.out.println(sum);
+		sum=a+b;
+		
+		while(sum<=a)
+		{
+			
+			sum=a+b;
+			System.out.println(sum);
+			a=b;
+			b=sum;
+		}
+
+	}
+}

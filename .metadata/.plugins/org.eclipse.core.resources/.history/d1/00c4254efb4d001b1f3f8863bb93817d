@@ -1,0 +1,35 @@
+package stringPrograms;
+
+public class DivideIntoNEquaParts {
+	
+	public static void main(String[] args)
+	{
+		String x="Sweta is singing";
+		int n=4,p=0,k=0;
+		String y[]=new String[n];
+		if(x.length()%n!=0)
+		{
+			System.out.println(x.length());
+			System.out.println("String can be divided into n equal parts");
+		}
+		else
+		{
+		 p=x.length()/4;
+		 System.out.println(p);
+		 for(int i=0;i<x.length();i=i+p)
+		 {
+               
+            
+             String part=x.substring(i,i+p);
+             y[k] = part;
+             k++;
+			 
+		 }
+		for(int j=0;j<y.length;j++)
+		{
+			System.out.print(y[j]);
+		}
+		}
+	}
+
+}

@@ -1,0 +1,34 @@
+
+public class Sample {
+	
+	public static void main(String[] args)
+	{
+		
+		
+		String x="listen";
+		String y="silent";
+		int k=0;
+		for(int i=0;i<x.length();i++)
+		{
+			char c=x.charAt(i);
+			for(int j=0;j<y.length();j++)
+			{
+				if(c==y.charAt(j))
+				{
+					k++;
+				}
+			}
+		}
+		if(k==x.length())
+		{
+			System.out.println("anagram");
+		}
+	
+
+	}
+
+}
+	
+	
+
+

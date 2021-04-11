@@ -1,0 +1,49 @@
+package stringPrograms;
+
+import javax.swing.text.html.MinimalHTMLWriter;
+
+public class minandmaxcharacterinstring {
+	
+	public static void main(String[] args)
+	{
+		String x="Max is sweta";
+		x=x.toLowerCase();
+		x=x.replace(' ', '\0');
+		int temp[]=new int[x.length()];
+		int f=0;
+		char c_min='\0',c_max='\0';
+		char [] ch=x.toCharArray();
+		for(int i=0;i<ch.length;i++)
+		{
+			int k=1;
+			for(int j=i+1;j<ch.length;j++)
+			{
+				if(ch[i]==ch[j])
+				{
+					k++;
+					ch[j]='\0';
+				}
+			}
+			if(ch[i]!='\0')
+			{
+				System.out.println("frequency of "+ ch[i]+" "+ k ) ;
+				temp[f++]=k;
+				int max=0,min=x.length();
+				if(min>k)
+				{
+					min=k;
+					 c_min=ch[i];
+				}
+				else if(max<k)
+				{
+					max=k;
+					 c_max=ch[i];
+				}
+			}
+		
+	}
+		System.out.println(c_min);
+		System.out.println(c_max);
+
+}
+}

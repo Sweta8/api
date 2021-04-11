@@ -1,0 +1,12 @@
+import java.util.Scanner;
+
+public class FiboanacciSeries {
+
+	public static void main(String[] args)
+	{
+		int a;
+		Scanner scn=new Scanner(System.in);
+		a=scn.nextInt();
+		
+	}
+}

@@ -1,0 +1,36 @@
+
+public class Sample {
+	
+	public static void main(String[] args)
+	{
+		
+		
+		String x="trees";
+		String y="stree";
+		int k=0;
+		for(int i=0;i<x.length();i++)
+		{
+			char c=x.charAt(i);
+			for(int j=0;j<y.length();j++)
+			{
+				if(c==y.charAt(j))
+				{
+					k++;
+					break;
+				}
+			}
+		}
+		System.out.println(k);
+		if(k==x.length())
+		{
+			System.out.println("anagram");
+		}
+	
+
+	}
+
+}
+	
+	
+
+

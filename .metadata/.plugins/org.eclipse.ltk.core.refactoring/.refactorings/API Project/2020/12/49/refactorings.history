@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;API Project/jira&apos; to &apos;jira.txt&apos;" description="Rename resource &apos;jira&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="jira" name="jira.txt" stamp="1607097043374" updateReferences="true"/>
+</session>

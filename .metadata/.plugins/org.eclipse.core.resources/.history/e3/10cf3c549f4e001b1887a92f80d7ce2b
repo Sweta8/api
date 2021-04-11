@@ -1,0 +1,11 @@
+package stringPrograms;
+
+public class LargestAndSmallestPalindrome {
+	
+	public static void main(String[] args)
+	{
+		String x="mmadamm madam";
+		String y[]=x.split(" ");
+	}
+
+}

@@ -1,0 +1,57 @@
+package stringPrograms;
+
+import javax.swing.text.html.MinimalHTMLWriter;
+
+public class minandmaxcharacterinstring {
+	
+	public static void main(String[] args)
+	{
+		String x="sssstll";
+		x=x.toLowerCase();
+		x=x.replace(' ', '\0');
+		/*int temp[]=new int[x.length()];
+		int f=0;*/
+		char c_min='\0';
+		char c_max='\0';
+		int m=0,n=0;
+		char [] ch=x.toCharArray();
+		char[] temp = new char[ch.length];
+		int freque[]=new int[ch.length];
+		for(int i=0;i<ch.length;i++)
+		{
+			int k=1;
+			for(int j=i+1;j<ch.length;j++)
+			{
+				if(ch[i]==ch[j])
+				{
+					k++;
+					ch[j]='\0';
+				}
+			}
+			if(ch[i]!='\0')
+			{
+				System.out.println("frequency of "+ ch[i]+" "+ k ) ;
+				
+				temp[m++]=ch[i];
+				freque[n++]=k;
+			}
+		}
+		for(int f=0;f<n;f++)
+		{
+		int max=0;
+		int min=freque[0];
+		if(min>freque[f])
+		{
+			min=temp[f];
+			 c_min=temp[f];
+		}
+		else if(max<freque[f])
+		{
+			max=temp[f];
+			 c_max=temp[f];
+		}
+}
+		System.out.println(c_min);
+		System.out.println(c_max);
+	}
+}

@@ -1,0 +1,11 @@
+package stringPrograms;
+
+public class FrequencyOfCharactersInString {
+	
+	public static void main(String[] args)
+	{
+		String x="Sweta is singing";
+		x=x.replace(" ", "");
+	}
+
+}

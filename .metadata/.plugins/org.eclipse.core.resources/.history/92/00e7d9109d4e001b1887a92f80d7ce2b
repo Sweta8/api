@@ -1,0 +1,12 @@
+package stringPrograms;
+
+public class LargestAndSmallestWord {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		String x="sweta is singing song";
+
+	}
+
+}

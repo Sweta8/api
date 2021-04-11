@@ -1,0 +1,11 @@
+package stringPrograms;
+
+public class ReverseEachWordInAString {
+	
+	public static void main(String[] args)
+	{
+		String x="Sweta is singing";
+		String y[]=x.split(" ");
+	}
+
+}

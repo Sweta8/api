@@ -1,0 +1,14 @@
+package stringPrograms;
+
+public class AnangramInString {
+	
+	public static void main(String[] args)
+	{
+		String x="silent";
+		String y="listen";
+		x=x.toLowerCase();
+		y=y.toLowerCase();
+		
+	}
+
+}

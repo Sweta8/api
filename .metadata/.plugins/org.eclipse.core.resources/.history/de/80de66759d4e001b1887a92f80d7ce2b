@@ -1,0 +1,19 @@
+package stringPrograms;
+
+public class LargestAndSmallestWord {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		String x="sweta is singing song";
+		String ch[]=x.split(" ");
+		int max=ch[0].length();
+		int min=ch[0].length();
+		for(int i=0;i<ch.length;i++)
+		{
+			if(ch[i].length())
+		}
+
+	}
+
+}

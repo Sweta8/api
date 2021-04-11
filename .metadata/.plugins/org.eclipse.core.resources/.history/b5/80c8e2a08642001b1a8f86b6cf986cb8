@@ -1,0 +1,25 @@
+package stringPrograms;
+
+public class removeWhiteSpacesInString {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		String x="name is ";
+		int l=x.length();
+		System.out.println(l);
+		String temp=" ";
+		for(int i=0;i<x.length();i++)
+		{
+			if(x.charAt(i)!=0)
+			{
+				temp=temp+x.charAt(i);
+			}
+		}
+		System.out.println(temp.length());
+		int y=l-temp.length();
+		System.out.println("No of white spaces is"+y);
+
+	}
+
+}

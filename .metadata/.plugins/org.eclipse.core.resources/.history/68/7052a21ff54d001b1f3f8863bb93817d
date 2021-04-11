@@ -1,0 +1,11 @@
+package stringPrograms;
+
+
+public class StringsAreAnagram_usinginbuiltfunctions {
+	
+	public static void main(String[] args)
+	{
+		
+	}
+
+}

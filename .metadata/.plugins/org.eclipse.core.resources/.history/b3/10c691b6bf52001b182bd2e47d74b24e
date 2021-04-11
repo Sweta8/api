@@ -1,0 +1,75 @@
+package stepDefinitions;
+
+import static io.restassured.RestAssured.given;
+import static org.junit.Assert.assertEquals;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import io.restassured.RestAssured;
+import io.restassured.builder.RequestSpecBuilder;
+import io.restassured.builder.ResponseSpecBuilder;
+import io.restassured.http.ContentType;
+import io.restassured.path.json.JsonPath;
+import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
+import io.restassured.specification.ResponseSpecification;
+import pojo.AddPlace;
+import pojo.Location;
+import resources.TestDataBuild;
+import resources.Utils;
+
+public class StepDefinition extends Utils {
+	RequestSpecification req;
+	ResponseSpecification res;
+	RequestSpecification request;
+	Response response;
+	TestDataBuild data=new TestDataBuild();
+@Given("Add Place PayLoad")
+public void add_Place_PayLoad() {
+    // Write code here that turns the phrase above into concrete actions
+	
+	
+	
+	RestAssured.baseURI="https://rahulshettyacademy.com";
+	
+	
+	
+	 res=new ResponseSpecBuilder().expectStatusCode(200).expectContentType(ContentType.JSON).build();
+	
+	 request= given().spec(req).body(data.addPlacePayLoad());
+	
+    
+}
+
+@When("user calls {string} with Post http request")
+public void user_calls_with_Post_http_request(String string) {
+    // Write code here that turns the phrase above into concrete actions
+	
+	response=request.when().post("/maps/api/place/add/json").then().spec(res).extract().response();
+	System.out.println(response.asString());
+	
+}
+
+@Then("verify the API call is success with status code {int}")
+public void verify_the_API_call_is_success_with_status_code(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+   assertEquals(response.getStatusCode(), 200);
+}
+
+@Then("{string} in response is {string}")
+public void in_response_is(String keyValue, String expectedValue) {
+    // Write code here that turns the phrase above into concrete actions
+	String responseAsString=response.asString();
+	JsonPath js=new JsonPath(responseAsString);
+	assertEquals(js.getString(keyValue),expectedValue);
+	
+   
+}
+
+
+
+}
